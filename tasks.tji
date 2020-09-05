@@ -1,4 +1,7 @@
 task spm "SPM" {
-  task "upload a template" {
+  task "upload my currently used template" {
+  }
+
+  task "upload scripts for generating weeks" {
   }
 }
