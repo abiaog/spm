@@ -1,0 +1,4 @@
+
+resource me "Me" {
+  email "abiaog@126.com"
+}

@@ -1,0 +1,32 @@
+/*
+ * This file contains an example project. It is part of the
+ * TaskJuggler project management tool. It uses a made up software
+ * development project to demonstrate some of the basic features of
+ * TaskJuggler. Please see the TaskJuggler manual for a more detailed
+ * description of the various syntax elements.
+ */
+project spm "Smart Project Management"  2020-09-05 +4m {
+  # Set the default time zone for the project. If not specified, UTC
+  # is used.
+  timezone "Europe/Paris"
+  # Hide the clock time. Only show the date.
+  timeformat "%Y-%m-%d"
+  # Use US format for numbers
+  numberformat "-" "" "," "." 1
+  # Use US financial format for currency values. Don't show cents.
+  currencyformat "(" ")" "," "." 0
+  # Pick a day during the project that will be reported as 'today' in
+  # the project reports. If not specified, the current day will be
+  # used, but this will likely be outside of the project range, so it
+  # can't be seen in the reports.
+#  now 2020-03-05-13:00
+  # The currency for all money values is the US Dollar.
+  currency "USD"
+
+}
+
+include "resources.tji"
+include "tasks.tji"
+include "reports.tji"
+
+

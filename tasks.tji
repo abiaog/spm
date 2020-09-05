@@ -1,0 +1,4 @@
+task spm "SPM" {
+  task "upload a template" {
+  }
+}
