@@ -1,0 +1,26 @@
+project nr "NR" 2020-01-01 +2y {
+  scenario plan "Plan" {
+    scenario replan "replan" {
+    }
+  }
+
+
+  extend resource {
+    text Competence "Competence"
+  }
+
+  extend task {
+    text DoD "DoD" {scenariospecific inherit}
+  }
+
+  timeformat "w%V.%u"
+
+
+
+}
+
+
+
+include "resources.tji"
+include "tasks.tji"
+include "reports.tji"
