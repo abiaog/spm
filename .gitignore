@@ -1,0 +1,8 @@
+*.html
+*.pid
+css/
+icons/
+scripts/
+*.log
+
+.taskjugglerrc
