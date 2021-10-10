@@ -1,9 +1,0 @@
-_global:
-  authKey: <~/.ssh/id_rsa.pub> here
-  webServerPort: 8080
-  _log:
-    logLevel: 3
-    outputLevel: 3
-
-
-
