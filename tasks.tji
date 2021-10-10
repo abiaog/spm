@@ -2,19 +2,22 @@ task spm "SPM" {
   task "upload my currently used template" {
     complete 100
   }
-
   task "upload scripts for generating weeks" {
     end ${w2140_7}
     complete 100
   }
 
-  task "implement nr.tjp " {
+
+  # Ongoing
+  task "implement spm.tjp(discard nr.tjp) " {
     start ${w2141_1}
     duration 2w
+    complete 0
   }
-  task "implement macros " {
+  task "implement common_macro.tji " {
     start ${w2141_1}
     duration 2w
+    complete 0
   }
   task "push.sh" {
     complete 0
@@ -23,6 +26,9 @@ task spm "SPM" {
     complete 0
   }
   task "report formats that I am using for NR project" {
+    complete 0
+  }
+  task "write blog for SPM" {
     complete 0
   }
 }
