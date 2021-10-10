@@ -3,7 +3,7 @@
 import datetime
 import logging
 
-logger = logging.getLogger('Auto')
+logger = logging.getLogger('SPM')
 logger.setLevel(logging.DEBUG)
 fh = logging.FileHandler('run.log')
 fh.setLevel(logging.DEBUG) 
@@ -23,7 +23,7 @@ class WeekGenerator(object):
         logger.debug('File name ' + self.tji_filename + ' was generated.')
 
     def produce_weeks(self):
-        tji = open(self.tji_filename, 'w')
+        tji = open(self.tji_filename, mode='w')
         logger.debug(self.tji_filename + ' was opened.')
         for w in range(0, 54):
             for d in range(0,7):
@@ -51,8 +51,12 @@ class WeekGenerator(object):
 
 
 def main():
-    g = WeekGenerator('2021')
-    g.produce_weeks()
+    y2021 = WeekGenerator('2021')
+    y2021 .produce_weeks()
+    y2022 = WeekGenerator('2022')
+    y2022 .produce_weeks()
+    y2023 = WeekGenerator('2023')
+    y2023 .produce_weeks()
 
 if __name__ == '__main__':
     main()
