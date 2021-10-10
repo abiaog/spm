@@ -1,0 +1,10 @@
+
+# simple journal
+macro OnTrack [
+  journalentry ${1} "On Track" {
+    alert green
+    details -8<-
+    ${2}
+    ->8-
+  }
+]

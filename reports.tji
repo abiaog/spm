@@ -83,7 +83,7 @@ taskreport overview "" {
     === Original Project Plan ===
   ->8-
   columns bsi { title 'WBS' },
-          name, start, end, effort,
+          name, start, end, complete, effort,
           revenue, chart { ${TaskTip} }
   # For this report we like to have the abbreviated weekday in front
   # of the date. %a is the tag for this.
@@ -117,6 +117,7 @@ macro AlertColor [
 taskreport status "" {
   columns bsi { width 50 title 'WBS' }, name { width 150 },
           start { width 100 }, end { width 100 },
+          complete,
           effort { width 100 },
           alert { tooltip plan.journal
                           != '' "<-query attribute='journal'->" width 150 },
@@ -152,6 +153,7 @@ taskreport status "" {
 taskreport development "" {
   headline "Development - Resource Allocation Report"
   columns bsi { title 'WBS' }, name, start, end, effort { title "Work" },
+          complete,
           duration, chart { ${TaskTip} scale day width 500 }
   timeformat "%Y-%m-%d"
   hideresource ~(isleaf() & isleaf_())

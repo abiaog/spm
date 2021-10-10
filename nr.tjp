@@ -1,4 +1,4 @@
-project nr "NR" 2020-01-01 +2y {
+project ep "Example Project" 2021-10-01 +2y {
   scenario plan "Plan" {
     scenario replan "replan" {
     }
@@ -20,7 +20,17 @@ project nr "NR" 2020-01-01 +2y {
 }
 
 
+include "week2021.tji"
+include "week2022.tji"
+include "week2023.tji"
+
+include 'flags.tji'
+include 'common_macro.tji'
+
+leaves holiday "National Day" 2021-10-01 - 2021-10-07
 
 include "resources.tji"
+
+
 include "tasks.tji"
 include "reports.tji"

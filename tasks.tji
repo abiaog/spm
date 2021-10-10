@@ -1,7 +1,28 @@
 task spm "SPM" {
   task "upload my currently used template" {
+    complete 100
   }
 
   task "upload scripts for generating weeks" {
+    end ${w2140_7}
+    complete 100
+  }
+
+  task "implement nr.tjp " {
+    start ${w2141_1}
+    duration 2w
+  }
+  task "implement macros " {
+    start ${w2141_1}
+    duration 2w
+  }
+  task "push.sh" {
+    complete 0
+  }
+  task "relaunch.sh" {
+    complete 0
+  }
+  task "report formats that I am using for NR project" {
+    complete 0
   }
 }
