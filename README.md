@@ -31,8 +31,12 @@ tj3 spm.tjp --report aReportname
 
 tj3 spm.tjp --list-reports tr_*
 
+# How to view projects
+
+http://127.0.0.1:8080/taskjuggler
 
 # Map F5 to run project in VIM
+
 map <F5> :wa <CR> :!./run.sh nr<CR>
 
 # Know Issues
