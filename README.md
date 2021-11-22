@@ -32,7 +32,7 @@ tj3 spm.tjp --report aReportname
 tj3 spm.tjp --list-reports tr_*
 
 
-# Map F5 to run project
+# Map F5 to run project in VIM
 map <F5> :wa <CR> :!./run.sh nr<CR>
 
 # Know Issues
