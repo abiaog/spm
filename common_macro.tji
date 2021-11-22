@@ -46,8 +46,26 @@ macro TaskTip_Week [
   scale week
   listtype numbered
   tooltip istask() -8<-
+    '''Notes: '''
+    <-query attribute='note'->
+    ----
+    '''Start: ''' <-query attribute='start'->
+    '''End: ''' <-query attribute='end'->
+    ----
+    '''Responsible:'''
+    <-query attribute='responsible'->
+    ----
+    '''Resources:'''
 
+    <-query attribute='resources'->
+    ----
+    '''Precursors: '''
 
+    <-query attribute='precursors'->
+    ----
+    '''Followers: '''
+
+    <-query attribute='followers'->
   ->8-
 
 ]
