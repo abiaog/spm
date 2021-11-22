@@ -6,7 +6,7 @@ set -e
 echo $1
 
 
-git add *.tjp *.tji *.sh
+git add *.tjp *.tji *.sh *.md
 
 
 echo '?:' $?
