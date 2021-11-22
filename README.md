@@ -32,6 +32,9 @@ tj3 spm.tjp --report aReportname
 tj3 spm.tjp --list-reports tr_*
 
 
+# Map F5 to run project
+map <F5> :wa <CR> :!./run.sh nr<CR>
+
 # Know Issues
 ## Issue 1
 

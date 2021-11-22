@@ -1,4 +1,4 @@
-project ep "Example Project" 2021-10-01 +2y {
+project nr "Example Project" 2021-10-01 +2y {
   scenario plan "Plan" {
     scenario replan "replan" {
     }
