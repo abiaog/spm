@@ -5,7 +5,6 @@ macro new_task [
 ]
 
 
-
 # simple journal
 macro OnTrack [
   journalentry ${1} "On Track" {
@@ -14,4 +13,41 @@ macro OnTrack [
     ${2}
     ->8-
   }
+]
+
+macro Warning [
+  journalentry ${1} "Warning" {
+      alert yellow
+      detail -8<-
+      ${2}
+      ->8-
+  }
+]
+
+macro Risk [
+  journalentry ${1} "Risk" {
+      alert red
+      detail -8<-
+      ${2}
+      ->8-
+  }
+]
+
+
+# for display
+macro AlertColor [
+  cellcolor plan.alert = 0 "#99FF99" # green
+  cellcolor plan.alert = 1 "#FFFF99" # yellow
+  cellcolor plan.alert = 2 "#FFB266" # red
+]
+
+macro TaskTip_Week [
+  timeformat2 "%V" # display with week
+  scale week
+  listtype numbered
+  tooltip istask() -8<-
+
+
+  ->8-
+
 ]
