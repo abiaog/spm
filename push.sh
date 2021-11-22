@@ -15,7 +15,7 @@ if [ -z $1 ]; then git commit -m"<auto push>"; else git commit -m"$1"; fi
 
 echo '?:' $?
 
-git push
+# git push
 
 echo '?:' $?
 
