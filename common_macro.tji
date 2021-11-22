@@ -67,5 +67,10 @@ macro TaskTip_Week [
 
     <-query attribute='followers'->
   ->8-
+  tooltip isresource() -8<-
+    '''Duties: '''
+
+    <-query attribute='duties'->
+  ->8-
 
 ]
