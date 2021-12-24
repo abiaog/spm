@@ -11,7 +11,7 @@ navigator navbar {
 
 textreport frame "" {
   header -8<-
-    == Example Project ==
+    == SPM Project ==
     <[navigator id="navbar"]>
   ->8-
   footer "----"
