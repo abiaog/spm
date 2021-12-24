@@ -12,7 +12,8 @@ task spm "SPM" {
   task "implement spm.tjp(discard nr.tjp) " {
     start ${w2141_1}
     duration 2w
-    complete 0
+    complete 50
+    ${Warning "${w2151_5}" ""}
   }
   task "implement common_macro.tji " {
     start ${w2141_1}
@@ -25,8 +26,9 @@ task spm "SPM" {
   task "relaunch.sh" {
     complete 0
   }
-  task "report formats that I am using for NR project" {
+  task "report formats that I am currently using" {
     complete 0
+    ${Risk "${w2151_5}" ""}
   }
   task "write blog for SPM" {
     complete 0

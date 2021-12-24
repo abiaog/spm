@@ -18,7 +18,7 @@ macro OnTrack [
 macro Warning [
   journalentry ${1} "Warning" {
       alert yellow
-      detail -8<-
+      details -8<-
       ${2}
       ->8-
   }
@@ -27,7 +27,7 @@ macro Warning [
 macro Risk [
   journalentry ${1} "Risk" {
       alert red
-      detail -8<-
+      details -8<-
       ${2}
       ->8-
   }
