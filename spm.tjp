@@ -33,4 +33,5 @@ include "resources.tji"
 
 
 include "tasks.tji"
+#include "reports_original.tji"
 include "reports.tji"

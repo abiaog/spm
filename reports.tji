@@ -8,28 +8,10 @@ navigator navbar {
   hidereport @none
 }
 
-macro TaskTip [
-  tooltip istask() -8<-
-    '''Start: ''' <-query attribute='start'->
-    '''End: ''' <-query attribute='end'->
-    ----
-    '''Resources:'''
-
-    <-query attribute='resources'->
-    ----
-    '''Precursors: '''
-
-    <-query attribute='precursors'->
-    ----
-    '''Followers: '''
-
-    <-query attribute='followers'->
-    ->8-
-]
 
 textreport frame "" {
   header -8<-
-    == Accounting Software Project ==
+    == Example Project ==
     <[navigator id="navbar"]>
   ->8-
   footer "----"
@@ -71,38 +53,23 @@ textreport frame "" {
 
 # A traditional Gantt chart with a project overview.
 taskreport overview "" {
+  headline "Overview (<-query attribute='now'->)"
   header -8<-
-    === Project Overview ===
-
-    The project is structured into 3 phases.
-
-    # Specification
-    # <-reportlink id='frame.development'->
-    # Testing
-
-    === Original Project Plan ===
   ->8-
-  columns bsi { title 'WBS' },
-          name, start, end, complete, effort,
-          revenue, chart { ${TaskTip} }
-  # For this report we like to have the abbreviated weekday in front
-  # of the date. %a is the tag for this.
-  timeformat "%a %Y-%m-%d"
-  loadunit days
+  columns
+    bsi { title 'WBS' }
+    , name {${AlertColor}}
+    , start
+    , end
+    , complete {${AlertColor} ${TaskTip_Week}}
+    , effort
+#    , revenue
+    , chart { ${TaskTip_Week} }
+
+  loadunit months
   hideresource @all
-  caption 'All effort values are in man days.'
 
   footer -8<-
-    === Staffing ===
-
-    All project phases are properly staffed. See [[ResourceGraph]] for
-    detailed resource allocations.
-
-    === Current Status ===
-
-    The project started off with a delay of 4 days. This slightly affected
-    the original schedule. See [[Deliveries]] for the impact on the
-    delivery dates.
   ->8-
 }
 
@@ -154,7 +121,7 @@ taskreport development "" {
   headline "Development - Resource Allocation Report"
   columns bsi { title 'WBS' }, name, start, end, effort { title "Work" },
           complete,
-          duration, chart { ${TaskTip} scale day width 500 }
+          duration, chart { ${TaskTip_Week} scale day width 500 }
   timeformat "%Y-%m-%d"
   hideresource ~(isleaf() & isleaf_())
   sortresources name.up
@@ -176,7 +143,7 @@ resourcereport contactList "" {
 # resource is under- or over-allocated for.
 resourcereport resourceGraph "" {
   headline "Resource Allocation Graph"
-  columns no, name, effort, rate, weekly { ${TaskTip} }
+  columns no, name, effort, rate, weekly { ${TaskTip_Week} }
   loadunit shortauto
   # We only like to show leaf tasks for leaf resources.
   hidetask ~(isleaf() & isleaf_())
