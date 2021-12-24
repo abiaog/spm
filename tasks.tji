@@ -6,28 +6,28 @@ task spm "SPM" {
     end ${w2140_7}
     complete 100
   }
-
-
-  # Ongoing
-  task "implement spm.tjp(discard nr.tjp) " {
-    start ${w2141_1}
-    duration 2w
-    complete 50
-    ${Warning "${w2151_5}" ""}
+  task "push.sh" {
+    complete 100
+  }
+  task "relaunch.sh" {
+    complete 100
   }
   task "implement common_macro.tji " {
     start ${w2141_1}
     duration 2w
-    complete 0
+    complete 100
   }
-  task "push.sh" {
-    complete 0
-  }
-  task "relaunch.sh" {
-    complete 0
+
+
+  # Ongoing
+  task "implement spm.tjp" {
+    start ${w2141_1}
+    duration 2w
+    complete 80
+    ${Warning "${w2151_5}" ""}
   }
   task "report formats that I am currently using" {
-    complete 0
+    complete 50
     ${Risk "${w2151_5}" ""}
   }
   task "write blog for SPM" {
