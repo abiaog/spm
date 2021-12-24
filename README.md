@@ -37,7 +37,7 @@ http://127.0.0.1:8080/taskjuggler
 
 # Map F5 to run project in VIM
 
-map <F5> :wa <CR> :!./run.sh nr<CR>
+map <F5> :wa <CR> :!./run.sh spm<CR>
 
 # Know Issues
 ## Issue 1
