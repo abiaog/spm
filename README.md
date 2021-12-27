@@ -43,6 +43,6 @@ map <F5> :wa <CR> :!./run.sh spm<CR>
 ## Issue 1
 
 # Example
-![image](https://github.com/abiaog/spm/blob/master/overview.png)
+![Image](https://github.com/abiaog/spm/blob/master/overview.png)
 
 
